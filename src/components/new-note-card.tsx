@@ -29,7 +29,7 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
     function handleSaveNote(event: FormEvent) { 
         event.preventDefault()
 
-        if (content == '') {
+        if (content === '') {
             return
         }
 
@@ -61,7 +61,7 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
         speechRecognition.lang = 'pt-BR'
         speechRecognition.continuous = true
         speechRecognition.maxAlternatives = 1
-        speechRecognition.interinResults = true
+        speechRecognition.interimResults = true
 
         speechRecognition.onresult = (event) => {
             const transcription = Array.from(event.results).reduce((text, result) => {
@@ -81,7 +81,7 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
     function handleStopRecording() {
         setIsRecording(false)
 
-        if (speechRecognition != null) {
+        if (speechRecognition !== null) {
             speechRecognition.stop()
         }
     }

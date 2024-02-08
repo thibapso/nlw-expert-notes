@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 import logo from './assets/logo-nlw-expert.svg'
 import { NewNoteCard } from './components/new-note-card'
 import { NoteCard } from './components/note-card'
@@ -35,12 +35,6 @@ export function App() {
     localStorage.setItem('notes', JSON.stringify(notesArray))
   }
 
-  function handleSearch(event: ChangeEvent<HTMLInputElement>) {
-    const query =  event.target.value
-
-    setSearch(query)
-  }
-
   function onNoteDeleted(id: string) {
     const notesArray = notes.filter(note => {
       return note.id != id
@@ -49,6 +43,12 @@ export function App() {
     setNotes(notesArray)
 
     localStorage.setItem('notes', JSON.stringify(notesArray))
+  }
+
+  function handleSearch(event: ChangeEvent<HTMLInputElement>) {
+    const query = event.target.value;
+
+    setSearch(query);
   }
 
   const filteredNotes = search != ''
