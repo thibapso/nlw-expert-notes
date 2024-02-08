@@ -63,7 +63,7 @@ export function NewNoteCard() {
                                 )}
                             </div>
 
-                            <button type='button' className='w-full bg-lime-400 py-4 text-center text-sm text-lime-950 outline-note font-medium hover:bg-lime-500'>
+                            <button type='submit' className='w-full bg-lime-400 py-4 text-center text-sm text-lime-950 outline-note font-medium hover:bg-lime-500'>
                                 Salvar nota
                             </button>
                         </form>
