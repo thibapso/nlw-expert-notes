@@ -16,7 +16,7 @@ npm install
 npm run dev
 ```
 
-Por fim, acesse http://localhost:5173 em seu navega para visualizar a aplicação.
+Por fim, acesse http://localhost:5173 em seu navegador para visualizar a aplicação.
 
 _________
 
